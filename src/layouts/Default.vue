@@ -1,39 +1,36 @@
 <template lang="pug">
   q-layout(view='lHh Lpr lFf')
-    q-header(elevated)
-      q-toolbar.q-gutter-x-md
-        q-btn(flat dense round @click='leftDrawerOpen = !leftDrawerOpen' aria-label='Menu')
-          q-icon(name='mdi-menu')
+    q-header(elevated reveal)
+      q-toolbar
+        q-btn(
+          flat
+          round
+          @click='setDrawer(!drawer)'
+          aria-label='Menu'
+        )
+          burger-button(
+            :bar-color='drawer ? "#FF554C" : "#FFFFFF"'
+            :bar-height='4'
+            :bar-width='25'
+            :active='drawer'
+          )
 
-        q-toolbar-title Quasar Boilerplate
-          q-badge.q-ml-xs(transparent class='glossy' color='orange' align='top') v{{ $q.version }}
+        q-toolbar-title
+          span.title.text-weight-thin.cursor-pointer(exact to='/') Quasar Boilerplate
+          q-badge.glossy.q-ml-xs.text-grey-9(transparent color='grey-3' align='top') v{{ $q.version }}
 
-        LocaleSwitcher
+        //- locale-switcher
+        q-btn(
+          flat
+          round
+        )
+          q-icon(name='mdi-login-variant')
 
-    q-drawer(v-model='leftDrawerOpen' bordered content-class='bg-grey-2')
-      q-list
-        q-item-label(header) Essential Links
-
-        q-item(clickable exact to='/')
-          q-item-section(avatar)
-            q-icon(name='mdi-school').
-          q-item-section
-            q-item-label Index Page
-            q-item-label(caption) Go to Index Page
-
-        q-item(clickable tag='a' target='_blank' href='https://github.quasar.dev')
-          q-item-section(avatar)
-            q-icon(name='mdi-github-circle').
-          q-item-section
-            q-item-label Github
-            q-item-label(caption) github.com/quasarframework
-
-        q-item(clickable tag='a' target='_blank' href='https://chat.quasar.dev')
-          q-item-section(avatar)
-            q-icon(name='mdi-chat').
-          q-item-section
-            q-item-label Discord Chat Channel
-            q-item-label(caption) chat.quasar.dev
+    left-drawer(
+      :drawer='drawer'
+      @show='setDrawer(true)'
+      @hide='setDrawer(false)'
+    )
 
     q-page-container
       router-view
@@ -41,13 +38,30 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
+
+const Layout = namespace('layout')
 
 @Component({
   components: {
-    LocaleSwitcher: () => import('src/components/common/locale-switcher.vue')
+    LocaleSwitcher: () => import('src/components/common/locale-switcher.vue'),
+    LeftDrawer: () => import('src/components/common/left-drawer.vue'),
+    BurgerButton: () => import('vue-burger-button')
   }
 })
 export default class LayoutDefault extends Vue {
-  leftDrawerOpen: Boolean = this.$q.platform.is.desktop
+  @Layout.State('drawer') drawer
+  @Layout.Action('setDrawer') setDrawer
+
+  created (): void {
+    (this as any).$q.screen.gt.sm
+      ? this.setDrawer(true)
+      : this.setDrawer(false)
+  }
 }
 </script>
+
+<style lang="stylus" scoped>
+  .title
+    text-shadow 1px 1px 2px black
+</style>

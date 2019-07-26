@@ -1,4 +1,12 @@
-export default [
+type TLocale = 'en-us' | 'uk' | 'ru' | null
+
+interface ILocale {
+  iso: TLocale
+  flag: string
+  name: string
+}
+
+const locales: ILocale[] = [
   {
     iso: 'en-us',
     flag: 'us',
@@ -15,3 +23,6 @@ export default [
     name: 'Русский'
   }
 ]
+
+
+export { locales, TLocale, ILocale }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  q-btn.lang-btn(rounded size='sm' color='transparent')
+  q-btn.lang-btn(rounded size='sm' color='primary')
     flag.lang-flag(
       :iso='flagIso'
       :title='langName'
@@ -11,8 +11,8 @@
       fit
       anchor="bottom left"
       self="top left"
-      transition-show='jump-down'
-      transition-hide='jump-up'
+      transition-show='jump-up'
+      transition-hide='jump-down'
     )
       q-list(dense)
         q-item.lang-item(
@@ -33,22 +33,29 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import locales from 'src/i18n/locales'
+import { namespace } from 'vuex-class'
+
+const Layout = namespace('layout')
+
+import { locales, ILocale } from 'src/i18n/locales'
 
 @Component({})
 export default class LocaleSwitcher extends Vue {
-  locales: Array<any> = locales
+  @Layout.Action('setLocale') setLocale
 
-  get langName () {
+  locales: ILocale[] = locales
+
+  get langName (): string {
     return (this as any).$q.lang.nativeName
   }
 
-  get flagIso () {
-    const iso = (this as any).$q.lang.isoName
-    return this.locales.find(x => x.iso === iso).flag
+  get flagIso (): string {
+    const iso: string = (this as any).$q.lang.isoName
+    return (this as any).locales.find(x => x.iso === iso).flag
   }
 
   onLocaleSwitch (langIso) {
+    this.setLocale(langIso)
     this.$i18n.locale = langIso
     import(`quasar/lang/${langIso}`).then(lang => {
       (this as any).$q.lang.set(lang.default)

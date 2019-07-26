@@ -2,17 +2,19 @@
 // import { Quasar } from 'quasar'
 // OTHERWISE:
 import Quasar from 'quasar'
+import { TLocale } from 'src/i18n/locales'
 
-export default async () => {
-  // const langIso = 'en-us' // ... some logic to determine it (use Cookies Plugin?)
-  let langIso
-  const locale = Quasar.lang.getLocale().toLowerCase()
+export default async ({ app }) => {
+  const locale: string = app.store.state.layout.locale || Quasar.lang.getLocale().toLowerCase()
 
+  let langIso: TLocale
   switch (locale) {
+    case 'uk':
     case 'uk-ua':
     case 'ru-ua':
       langIso = 'uk'
       break
+    case 'ru':
     case 'uk-ru':
     case 'ru-ru':
       langIso = 'ru'

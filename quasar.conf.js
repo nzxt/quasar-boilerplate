@@ -18,7 +18,8 @@ module.exports = function (ctx) {
     ],
 
     css: [
-      'app.styl'
+      'app.styl',
+      '~vue-burger-button/dist/vue-burger-button.css'
     ],
 
     extras: [
@@ -55,8 +56,11 @@ module.exports = function (ctx) {
         'QItemLabel',
 
         'QBadge',
+        'QAvatar',
         'QTooltip',
-        'QMenu'
+        'QScrollArea',
+        'QMenu',
+        'QImg'
       ],
 
       directives: [
