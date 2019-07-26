@@ -124,9 +124,9 @@ module.exports = function (ctx) {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {}, // only for NON InjectManifest
       manifest: {
-        // name: 'Quasar App Boilerplate',
-        // short_name: 'Quasar App Boilerplate',
-        // description: 'A Quasar Framework application boilerplate for future works!',
+        // name: 'Quasar App Starter',
+        // short_name: 'Quasar Starter',
+        // description: 'A Quasar Framework application starter for future works!',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -187,7 +187,7 @@ module.exports = function (ctx) {
 
       builder: {
         // https://www.electron.build/configuration/configuration
-        // appId: 'quasar-boilerplate'
+        // appId: 'quasar-starter'
       }
     }
   }

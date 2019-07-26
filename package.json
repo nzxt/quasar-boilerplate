@@ -1,8 +1,8 @@
 {
-  "name": "quasar-boilerplate",
+  "name": "quasar-starter",
   "version": "0.0.1",
-  "description": "A Quasar Framework application boilerplate for future works!",
-  "productName": "Quasar App Boilerplate",
+  "description": "A Quasar Framework application starter for future works!",
+  "productName": "Quasar Starter",
   "cordovaId": "dev.molfar.quasar.app",
   "author": "Deniz True <nzxt.ua@gmail.com>",
   "private": true,

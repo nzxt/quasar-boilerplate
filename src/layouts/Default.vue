@@ -16,8 +16,8 @@
           )
 
         q-toolbar-title
-          span.title.text-weight-thin.cursor-pointer(exact to='/') Quasar Boilerplate
-          q-badge.glossy.q-ml-xs.text-grey-9(transparent color='grey-3' align='top') v{{ $q.version }}
+          span.title.text-weight-thin.cursor-pointer(exact to='/') Quasar Starter
+          q-badge.glossy.q-ml-sm.text-grey-9(transparent color='grey-3' align='top') v{{ $q.version }}
 
         //- locale-switcher
         q-btn(
