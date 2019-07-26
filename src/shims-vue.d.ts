@@ -1,14 +1,14 @@
 import Vue, { ComponentOptions } from 'vue'
 
 declare module '*.vue' {
-  // import Vue from 'vue'
   export default Vue
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
     // $L: any;
-    // $api: any; // $axios
+    // $api: any;
+    // $axios: any;
     // $apollo: any;
     // $firebase: any;
  }

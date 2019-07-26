@@ -1,14 +1,14 @@
-<template lang='pug'>
+<template lang="pug">
   q-layout(view='lHh Lpr lFf')
     q-header(elevated)
-      q-toolbar
+      q-toolbar.q-gutter-x-md
         q-btn(flat dense round @click='leftDrawerOpen = !leftDrawerOpen' aria-label='Menu')
           q-icon(name='mdi-menu')
 
-        q-toolbar-title
-          | Quasar App
+        q-toolbar-title Quasar Boilerplate
+          q-badge.q-ml-xs(transparent class='glossy' color='orange' align='top') v{{ $q.version }}
 
-        div Quasar v{{ $q.version }}
+        LocaleSwitcher
 
     q-drawer(v-model='leftDrawerOpen' bordered content-class='bg-grey-2')
       q-list
@@ -40,22 +40,14 @@
 </template>
 
 <script lang="ts">
-import { openURL } from 'quasar'
+import { Component, Vue } from 'vue-property-decorator'
 
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'MyLayout',
-  data () {
-    return {
-      leftDrawerOpen: this.$q.platform.is.desktop
-    }
-  },
-  methods: {
-    openURL
+@Component({
+  components: {
+    LocaleSwitcher: () => import('src/components/common/locale-switcher.vue')
   }
 })
+export default class LayoutDefault extends Vue {
+  leftDrawerOpen: Boolean = this.$q.platform.is.desktop
+}
 </script>
-
-<style>
-</style>
