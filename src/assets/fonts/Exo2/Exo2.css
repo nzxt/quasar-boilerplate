@@ -1,0 +1,59 @@
+/* exo2-100normal - cyrilic */
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('Exo2 Thin '),
+    local('Exo2-Thin'),
+    url('./Exo2-Thin.ttf') format('truetype');
+}
+
+/* exo2-300normal - cyrilic */
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Exo2 Light '),
+    local('Exo2-Light'),
+    url('./Exo2-Light.ttf') format('truetype');
+}
+
+/* exo2-400normal - cyrilic */
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Exo2 Regular '),
+    local('Exo2-Regular'),
+    url('./Exo2-Regular.ttf') format('truetype');
+}
+
+/* exo2-500normal - cyrilic */
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Exo2 Medium '),
+    local('Exo2-Medium'),
+    url('./Exo2-Medium.ttf') format('truetype');
+}
+
+/* exo2-700normal - cyrilic */
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Exo2 Bold '),
+    local('Exo2-Bold'),
+    url('./Exo2-Bold.ttf') format('truetype');
+}

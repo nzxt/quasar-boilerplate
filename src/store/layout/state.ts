@@ -1,4 +1,4 @@
-import { TLocale } from 'src/i18n/locales'
+import { TLocale } from "src/types/_interfaces"
 
 interface IState {
   drawer: Boolean

@@ -5,6 +5,7 @@ import createPersistedState from 'vuex-persistedstate'
 
 // import example from './module-example'
 import layout from './layout'
+import profile from './profile'
 
 Vue.use(Vuex)
 
@@ -17,7 +18,8 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       // example
-      layout
+      layout,
+      profile
     },
 
     plugins: [createPersistedState(

@@ -1,10 +1,4 @@
-type TLocale = 'en-us' | 'uk' | 'ru' | null
-
-interface ILocale {
-  iso: TLocale
-  flag: string
-  name: string
-}
+import { ILocale } from "src/types/_interfaces"
 
 const locales: ILocale[] = [
   {
@@ -13,16 +7,16 @@ const locales: ILocale[] = [
     name: 'English'
   },
   {
-    iso: 'uk',
-    flag: 'ua',
-    name: 'Українська'
-  },
-  {
     iso: 'ru',
     flag: 'ru',
     name: 'Русский'
+  },
+  {
+    iso: 'uk',
+    flag: 'ua',
+    name: 'Українська'
   }
 ]
 
 
-export { locales, TLocale, ILocale }
+export { locales }

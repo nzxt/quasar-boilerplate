@@ -2,7 +2,7 @@ import VueI18n from 'vue-i18n'
 import messages from 'src/i18n'
 import Quasar from 'quasar'
 
-import { TLocale } from 'src/i18n/locales'
+import { TLocale } from 'src/types/_interfaces'
 
 export default async ({ app, Vue }) => {
   Vue.use(VueI18n)

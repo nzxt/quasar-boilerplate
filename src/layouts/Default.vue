@@ -31,6 +31,7 @@
           )
           q-tooltip(
             :value="true"
+            content-class='bg-primary'
             transition-show="flip-right"
             transition-hide="flip-left"
             anchor="center left"

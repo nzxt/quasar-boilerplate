@@ -46,8 +46,8 @@
         src="statics/abstract-blue-background.jpg"
         style="height: 93px;"
       )
-        .absolute-bottom-right.text-caption(
-          style="height:20px; padding: 0 7px;"
+        .absolute-bottom-right.text-caption.text-weight-light(
+          style="height:22px; padding: 0 7px;"
         )
             q-icon.q-mr-xs(name='mdi-account-circle-outline')
             | profile
@@ -58,9 +58,9 @@
                 img(src="statics/nzxtua.png")
 
           .col-9.vertical-middle.q-pl-xs.text-grey-8
-            div.text-weight-bold molfarDevs
-            div.text-caption molfar.devs@gmail.com
-            div.text-caption +38 (096) 703-00-33
+            div.text-weight-bold {{ user.name }}
+            div.text-caption {{ user.email }}
+            div.text-caption {{ user.phone }}
 
       .flex.flex-center.absolute-bottom.q-my-sm
         locale-switcher
@@ -71,6 +71,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
 
 const Layout = namespace('layout')
+const Profile = namespace('profile')
 
 import { Navigation } from 'src/assets/menu/navigation'
 import { Essential } from 'src/assets/menu/essential'
@@ -86,6 +87,7 @@ export default class LeftDrawer extends Vue {
 
   @Layout.Action('setMode') setMode
   @Layout.Action('setDrawer') setDrawer
+  @Profile.State('user') user
 
   navigation: any = Navigation
   essential: any = Essential

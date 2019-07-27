@@ -37,7 +37,8 @@ import { namespace } from 'vuex-class'
 
 const Layout = namespace('layout')
 
-import { locales, ILocale } from 'src/i18n/locales'
+import { locales } from 'src/i18n/locales'
+import { ILocale } from 'src/types/_interfaces'
 
 @Component({})
 export default class LocaleSwitcher extends Vue {

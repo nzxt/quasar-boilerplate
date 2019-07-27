@@ -2,7 +2,8 @@
 // import { Quasar } from 'quasar'
 // OTHERWISE:
 import Quasar from 'quasar'
-import { TLocale } from 'src/i18n/locales'
+
+import { TLocale } from 'src/types/_interfaces'
 
 export default async ({ app }) => {
   const locale: string = app.store.state.layout.locale || Quasar.lang.getLocale().toLowerCase()

@@ -1,4 +1,4 @@
-import { TLocale } from 'src/i18n/locales'
+import { TLocale } from "src/types/_interfaces"
 
 export function setDrawer ({ commit }, value: Boolean) {
   commit('SET_DRAWER', value)
