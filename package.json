@@ -20,6 +20,7 @@
     "@quasar/extras": "^1.2.0",
     "axios": "^0.18.1",
     "quasar": "^1.0.5",
+    "typeface-montserrat": "^0.0.75",
     "vue-burger-button": "^0.1.2",
     "vue-flag-icon": "^1.0.6",
     "vue-i18n": "^8.12.0",

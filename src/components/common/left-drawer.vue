@@ -43,21 +43,22 @@
 
       q-img.absolute-top(
         @click.native='$router.push("profile")'
-        src="statics/material-bg.png"
-        style="height: 100px;"
+        src="statics/abstract-blue-background.jpg"
+        style="height: 93px;"
       )
         .absolute-bottom-right.text-caption(
-          style="height:36px; padding:10px;"
+          style="height:20px; padding: 0 7px;"
         )
-            q-icon.q-mr-xs(name='mdi-pencil')
-            | edit
+            q-icon.q-mr-xs(name='mdi-account-circle-outline')
+            | profile
         div.row.absolute-top.bg-transparent
-          .col-4
-            q-avatar(size="56px")
-              img(src="https://cdn.quasar.dev/img/boy-avatar.png")
+          .col-3
+            q-btn.shadow-2(round size='lg')
+              q-avatar
+                img(src="statics/nzxtua.png")
 
-          .col-8.vertical-middle
-            div.text-weight-bold Deniz True
+          .col-9.vertical-middle.q-pl-xs.text-grey-8
+            div.text-weight-bold molfarDevs
             div.text-caption molfar.devs@gmail.com
             div.text-caption +38 (096) 703-00-33
 

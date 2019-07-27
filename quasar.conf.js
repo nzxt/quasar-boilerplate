@@ -23,15 +23,14 @@ module.exports = function (ctx) {
     ],
 
     extras: [
+      'mdi-v3'
       // 'ionicons-v4',
       // 'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
       // 'material-icons', // optional, you are not bound to it
-
-      'mdi-v3',
-      'roboto-font' // optional, you are not bound to it
+      // 'roboto-font' // optional, you are not bound to it
     ],
 
     framework: {
@@ -81,7 +80,7 @@ module.exports = function (ctx) {
       vueRouterMode: 'history',
       // vueCompiler: true,
       // gzip: true,
-      // analyze: true,
+      analyze: true,
       // extractCSS: false,
       extendWebpack (cfg) {
         cfg.module.rules.push({

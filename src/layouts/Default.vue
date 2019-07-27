@@ -1,6 +1,6 @@
 <template lang="pug">
   q-layout(view='lHh Lpr lFf')
-    q-header(elevated reveal)
+    q-header.bg-white(elevated reveal)
       q-toolbar
         q-btn(
           flat
@@ -9,22 +9,35 @@
           aria-label='Menu'
         )
           burger-button(
-            :bar-color='drawer ? "#FF554C" : "#FFFFFF"'
+            :bar-color='drawer ? "#FF554C" : "#787878"'
             :bar-height='4'
             :bar-width='25'
             :active='drawer'
           )
 
         q-toolbar-title
-          span.title.text-weight-thin.cursor-pointer(exact to='/') Quasar Starter
-          q-badge.glossy.q-ml-sm.text-grey-9(transparent color='grey-3' align='top') v{{ $q.version }}
+          span.title.text-h5.text-weight-light.cursor-pointer(exact to='/') Quasar Starter
+          q-badge.q-ml-sm(glossy transparent text-color='grey-7' color='grey-3' align='top') v{{ $q.version }}
 
         //- locale-switcher
         q-btn(
           flat
           round
+          @click='loggedIn = !loggedIn'
         )
-          q-icon(name='mdi-login-variant')
+          q-icon(
+            color='grey-7'
+            :name='loggedIn ? "mdi-logout-variant" : "mdi-login-variant"'
+          )
+          q-tooltip(
+            :value="true"
+            transition-show="flip-right"
+            transition-hide="flip-left"
+            anchor="center left"
+            self="center right"
+            :offset="[10, 10]"
+          )
+            | {{ loggedIn ? "Sign Out" : "Sign In" }}
 
     left-drawer(
       :drawer='drawer'
@@ -52,6 +65,8 @@ const Layout = namespace('layout')
 export default class LayoutDefault extends Vue {
   @Layout.State('drawer') drawer
   @Layout.Action('setDrawer') setDrawer
+
+  loggedIn: Boolean = false
 
   created (): void {
     (this as any).$q.screen.gt.sm

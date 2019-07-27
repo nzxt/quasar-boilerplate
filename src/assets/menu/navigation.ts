@@ -3,15 +3,15 @@ const Navigation: any = [
     path: 'index',
     name: 'Main Page',
     icon: 'mdi-chemical-weapon',
-    color: 'primary',
+    color: 'blue-9',
     description: 'Go to main page..'
   },
   {
     path: 'github.com',
     name: 'GitHub',
     icon: 'mdi-github-circle',
-    color: 'warning',
-    description: 'Our GitHub page..'
+    color: 'grey-9',
+    description: 'Our GitHub projects..'
   }
 ]
 
