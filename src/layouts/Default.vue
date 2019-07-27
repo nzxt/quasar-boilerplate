@@ -9,7 +9,7 @@
           aria-label='Menu'
         )
           burger-button(
-            :bar-color='drawer ? "#FF554C" : "#787878"'
+            :bar-color='drawer ? "#FF554C" : "#1976D2"'
             :bar-height='4'
             :bar-width='25'
             :active='drawer'
