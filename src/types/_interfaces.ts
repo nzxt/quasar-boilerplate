@@ -11,4 +11,5 @@ export interface IUser {
   email: string
   phone: string
   birthday: string
+  avatar: string
 }

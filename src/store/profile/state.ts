@@ -9,6 +9,7 @@ export const state: IState = {
     name: 'molfarDevs',
     email: 'molfar.devs@gmail.com',
     phone: '+38 (096) 703-00-33',
-    birthday: '1985/01/31'
+    birthday: '1985/01/31',
+    avatar: 'statics/nzxtua.png'
   }
 }

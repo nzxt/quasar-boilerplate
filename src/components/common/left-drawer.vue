@@ -55,7 +55,7 @@
           .col-3
             q-btn.shadow-2(round size='lg')
               q-avatar
-                img(src="statics/nzxtua.png")
+                img(:src="user.avatar")
 
           .col-9.vertical-middle.q-pl-xs.text-grey-8
             div.text-weight-bold {{ user.name }}

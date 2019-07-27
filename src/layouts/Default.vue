@@ -16,7 +16,7 @@
           )
 
         q-toolbar-title
-          span.title.text-h5.text-weight-light.cursor-pointer(exact to='/') Quasar Starter
+          span.title.text-h5.text-weight-light.cursor-pointer(@click='$router.push("/")') Quasar Starter
           q-badge.q-ml-sm(glossy transparent text-color='grey-7' color='grey-3' align='top') v{{ $q.version }}
 
         //- locale-switcher

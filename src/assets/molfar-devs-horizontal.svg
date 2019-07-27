@@ -1,0 +1,22 @@
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="15 15 570 130">
+    <g data-item-type="image" data-item="Image" data-logo-item="" id="logo__item--logo_0" class="logo__item">
+        <g class="logo__item__inner" transform="translate(0 0) scale(1.5792175078776935 1.5792175078776935) rotate(0 0 0)">
+            <g>
+                <polygon fill="#FCC930" points="48.355,48.834 49.056,84.13 57.268,77.665 65.305,88.675 70.025,84.481 62.684,74.695 74.393,74.695  " data-part-id="logo__item--logo_0__0"></polygon>
+                <path fill="#27A8E0" d="M54.119,12.998v14.974c8.672,2.473,15.029,10.438,15.029,19.901c0,4.031-1.172,7.781-3.165,10.963 L77.99,70.762c4.647-6.083,7.412-13.685,7.412-21.927C85.402,30.514,71.785,15.386,54.119,12.998z" data-part-id="logo__item--logo_0__1"></path>
+                <path fill="#FCC930" d="M27.735,47.873c0-11.349,9.132-20.556,20.448-20.693V12.688C28.692,13.243,13.06,29.205,13.06,48.834 c0,18.107,13.308,33.11,30.678,35.757l-0.331-16.654C34.408,65.685,27.735,57.567,27.735,47.873z" data-part-id="logo__item--logo_0__2"></path>
+            </g>
+        </g>
+    </g>
+    <g data-item-type="text" data-item="molfardevs" id="logo__item--molfardevs" class="logo__item">
+        <g class="logo__item__inner" transform="translate(145 105) scale(1 1) rotate(0 0 0)">
+            <text data-part-id="logo__item--molfardevs" dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Montserrat" font-size="72px" fill="#FCC930" letter-spacing="0" font-weight="bold" font-style="normal" data-font-family="Montserrat" data-font-weight="bold" data-font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf">molfar</text>
+            </g>
+            <g class="logo__item__inner" transform="translate(395 105) scale(1 1) rotate(0 0 0)">
+            <text data-part-id="logo__item--molfardevs" dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Montserrat" font-size="72px" fill="#27A8E0" letter-spacing="0" font-weight="bold" font-style="normal" data-font-family="Montserrat" data-font-weight="bold"
+            data-font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf">Devs</text>
+        </g>
+    </g>
+</svg>

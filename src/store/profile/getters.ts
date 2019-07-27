@@ -1,3 +1,3 @@
-// export function someFunction (state) {
-//   return state.someProp
-// }
+export function someFunction (state) {
+  // return state.someProp
+}
